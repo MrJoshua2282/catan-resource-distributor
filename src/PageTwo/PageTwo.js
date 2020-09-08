@@ -1,55 +1,53 @@
 import React from 'react';
 
 import './PageTwo.css';
+import Resource from './Resource';
+import AllPlayersResources from './AllPlayersResources'
 
 export default function PageTwo(props) {
 
     const dicePress = props.dice.map((el, i) => {
         return (
-            <span className='dice__press' key={`${el}${i}`} >{el.die}</span>
+            <span className='dice__press' key={`${el}${i}`} onClick={() => props.showResourcesHandler(el.die)} >{el.die}</span>
         );
     });
 
+    let displayableResources;
+    if (props.displayableResources) {
+        displayableResources = props.displayableResources.map((player, ind) => {
+            return (
+                <AllPlayersResources key={`${player.name}${ind}${player.name}`} name={player.name} resources={player.resources} />
+            )
+        })
+    }
+
     const diceWithResources = props.dice.map((el, i) => {
-        const players = props.players.map((el, i) =>
-            (<div key={`${el.name}${Math.random()}`} >{el.name}</div>)
+        const players = props.players.map((current, i) =>
+            (<div key={`${current.name}${Math.random()}`} onClick={() => {
+                props.addPersonToDiceInventory(current, el.die);
+                props.dice.forEach(item => document.querySelector(`#myDropdown${item.die}`).classList.remove("show"));
+            }}>{current.name}</div>)
         );
+
         const personRowResources = el.inventory.map((cur, index) => {
             return (
                 <span key={`aaa${cur.name}${index}`} className='resource__row'>
-                    <name>{cur.name}</name>
-                    <span className='resource__btn-align'>
-                        <button>+</button>
-                        <span>WHEAT</span>
-                        <span>{cur.resources.wheat}</span>
-                        <button>-</button>
-                    </span>
-                    <span className='resource__btn-align'>
-                        <button>+</button>
-                        <span>BRICK</span>
-                        <span>{cur.resources.brick}</span>
-                        <button>-</button>
-                    </span>
-                    <span className='resource__btn-align'>
-                        <button>+</button>
-                        <span>WOOL</span>
-                        <span>{cur.resources.wool}</span>
-                        <button>-</button>
-                    </span>
-                    <span className='resource__btn-align'>
-                        <button>+</button>
-                        <span>WOOD</span>
-                        <span>{cur.resources.wood}</span>
-                        <button>-</button>
-                    </span>
-                    <span className='resource__btn-align'>
-                        <button>+</button>
-                        <span>ORE</span>
-                        <span>{cur.resources.ore}</span>
-                        <button>-</button>
-                    </span>
-                    <button>ROBBER</button>
-                    <button>DELETE</button>
+                    <span>{cur.name}</span>
+
+                    <Resource resourceName='WHEAT' count={cur.resources.wheat} addResourceHandler={props.addResourceHandler} removeResourceHandler={props.removeResourceHandler} uniqueRowId={cur.uniqueRowId} die={el.die} resource='wheat' />
+
+                    <Resource resourceName='BRICK' count={cur.resources.brick} addResourceHandler={props.addResourceHandler} removeResourceHandler={props.removeResourceHandler} uniqueRowId={cur.uniqueRowId} die={el.die} resource='brick' />
+
+                    <Resource resourceName='WOOL' count={cur.resources.wool} addResourceHandler={props.addResourceHandler} removeResourceHandler={props.removeResourceHandler} uniqueRowId={cur.uniqueRowId} die={el.die} resource='wool' />
+
+                    <Resource resourceName='WOOD' count={cur.resources.wood} addResourceHandler={props.addResourceHandler} removeResourceHandler={props.removeResourceHandler} uniqueRowId={cur.uniqueRowId} die={el.die} resource='wood' />
+
+                    <Resource resourceName='ORE' count={cur.resources.ore} addResourceHandler={props.addResourceHandler} removeResourceHandler={props.removeResourceHandler} uniqueRowId={cur.uniqueRowId} die={el.die} resource='ore' />
+
+                    <button onClick={() => props.toggleRobberHandler(cur.uniqueRowId, el.die)}>ROBBER{`${cur.robber ? 'On' : 'Off'}`}</button>
+                    <button onClick={() => {
+                        props.deletePersonFromDiceInventory(cur.uniqueRowId, el.die);
+                    }} >DELETE</button>
                 </span>
             )
         });
