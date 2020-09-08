@@ -1,11 +1,11 @@
 import React from 'react';
 
 export default function AllPlayersResources(props) {
-    let resource = Object.entries(props.resource).map((el, i) => {
-        return (
-            
-        )
-    })
+    // let resource = Object.entries(props.resource).map((el, i) => {
+    //     return (
+
+    //     )
+    // })
     return (
         <React.Fragment>
             <span>{props.name}</span>
