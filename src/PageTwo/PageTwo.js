@@ -2,7 +2,8 @@ import React from 'react';
 
 import './PageTwo.css';
 import Resource from './Resource';
-import AllPlayersResources from './AllPlayersResources'
+import AllPlayersResources from './AllPlayersResources';
+import robberImg from '../asset/robber.png';
 
 export default function PageTwo(props) {
 
@@ -16,7 +17,7 @@ export default function PageTwo(props) {
     if (props.displayableResources) {
         displayableResources = props.displayableResources.map((player, ind) => {
             return (
-                <AllPlayersResources key={`${player.name}${ind}${player.name}`} name={player.name} resources={player.resources} />
+                <AllPlayersResources key={`${ind}${player.unique}`} name={player.name} resources={player.resources} />
             )
         })
     }
@@ -34,25 +35,26 @@ export default function PageTwo(props) {
                 <span key={`aaa${cur.name}${index}`} className='resource__row'>
                     <span>{cur.name}</span>
 
-                    <Resource resourceName='WHEAT' count={cur.resources.wheat} addResourceHandler={props.addResourceHandler} removeResourceHandler={props.removeResourceHandler} uniqueRowId={cur.uniqueRowId} die={el.die} resource='wheat' />
+                    <Resource resourceName='WHEAT' className={cur.robber && 'active__robber noCursor'} count={cur.resources.wheat} addResourceHandler={props.addResourceHandler} removeResourceHandler={props.removeResourceHandler} uniqueRowId={cur.uniqueRowId} die={el.die} resource='wheat' />
 
-                    <Resource resourceName='BRICK' count={cur.resources.brick} addResourceHandler={props.addResourceHandler} removeResourceHandler={props.removeResourceHandler} uniqueRowId={cur.uniqueRowId} die={el.die} resource='brick' />
+                    <Resource resourceName='BRICK' className={cur.robber && 'active__robber noCursor'} count={cur.resources.brick} addResourceHandler={props.addResourceHandler} removeResourceHandler={props.removeResourceHandler} uniqueRowId={cur.uniqueRowId} die={el.die} resource='brick' />
 
-                    <Resource resourceName='WOOL' count={cur.resources.wool} addResourceHandler={props.addResourceHandler} removeResourceHandler={props.removeResourceHandler} uniqueRowId={cur.uniqueRowId} die={el.die} resource='wool' />
+                    <Resource resourceName='WOOL' className={cur.robber && 'active__robber noCursor'} count={cur.resources.wool} addResourceHandler={props.addResourceHandler} removeResourceHandler={props.removeResourceHandler} uniqueRowId={cur.uniqueRowId} die={el.die} resource='wool' />
 
-                    <Resource resourceName='WOOD' count={cur.resources.wood} addResourceHandler={props.addResourceHandler} removeResourceHandler={props.removeResourceHandler} uniqueRowId={cur.uniqueRowId} die={el.die} resource='wood' />
+                    <Resource resourceName='WOOD' className={cur.robber && 'active__robber noCursor'} count={cur.resources.wood} addResourceHandler={props.addResourceHandler} removeResourceHandler={props.removeResourceHandler} uniqueRowId={cur.uniqueRowId} die={el.die} resource='wood' />
 
-                    <Resource resourceName='ORE' count={cur.resources.ore} addResourceHandler={props.addResourceHandler} removeResourceHandler={props.removeResourceHandler} uniqueRowId={cur.uniqueRowId} die={el.die} resource='ore' />
+                    <Resource resourceName='ORE' className={cur.robber && 'active__robber noCursor'} count={cur.resources.ore} addResourceHandler={props.addResourceHandler} removeResourceHandler={props.removeResourceHandler} uniqueRowId={cur.uniqueRowId} die={el.die} resource='ore' />
 
-                    <button onClick={() => props.toggleRobberHandler(cur.uniqueRowId, el.die)}>ROBBER{`${cur.robber ? 'On' : 'Off'}`}</button>
-                    <button onClick={() => {
+                    <span className={`${!cur.robber && 'robber__container'}`} onClick={() => props.toggleRobberHandler(cur.uniqueRowId, el.die)} ><img className={`${!cur.robber ? 'active__robber' : 'robber__margin'}`} src={robberImg} alt='robber' /></span>
+
+                    <button className='delete__row' onClick={() => {
                         props.deletePersonFromDiceInventory(cur.uniqueRowId, el.die);
                     }} >DELETE</button>
                 </span>
             )
         });
         return (
-            <div key={`bbb${el.die}${i}zzz`}>
+            <div className='die__container__row' key={`bbb${el.die}${i}zzz`}>
                 <div className='die__row' >{el.die}</div>
                 {personRowResources}
                 <div className="dropdown">
@@ -65,11 +67,16 @@ export default function PageTwo(props) {
         );
     });
     return (
+
         <div>
             <span className='dice__press-container'>
                 {dicePress}
             </span>
-            <div>Display who gets what resources and how many</div>
+            <div>
+
+                <span className='displayable__resources'>{displayableResources}</span>
+                {props.displayableResources && <button className='clear__resources' onClick={() => props.hideResourcesHandler()}>CLEAR RESOURCES</button>}
+            </div>
             {diceWithResources}
             <button className='go_to_page_one' onClick={() => props.changePageHandler(1)} >PAGE ONE</button>
         </div>

@@ -1,3 +1,40 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page__one {
+    display: grid;
+    justify-content: center;
+}
+
+input, .name-input__btn {
+    margin-bottom: 1rem;
+}
+
+::placeholder {
+    text-align: center;
+}
+
+li {
+    list-style: circle;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    text-align: end;
+}
+
+li button {
+    padding: 1rem;
+    border-radius: 50%;
+    transition: all .3s;
+    border: 1px solid rgba(0, 0, 0, 0.24);
+    margin-left: 1rem;
+}
+
+li button:hover {
+    background-color: salmon;
+    color:white;
+    border: 1px solid white;
+}
 
 .let__games__begin {
     position: absolute;

@@ -10,7 +10,7 @@ function App() {
   const [players, setPlayers] = useState([{ name: 'Joshua', unique: 'sdfasgas309u434' }, { name: 'Jane', unique: 'sdfasgassdfjkds309u434' }]);
   const [page, setPage] = useState(2);
   const [dice, setDice] = useState([]);
-  const [displayableResources, setDisplayableResources] = useState([]);
+  const [displayableResources, setDisplayableResources] = useState('');
 
   useEffect(() => {
     const dice = DICE.map(el => {
@@ -105,37 +105,43 @@ function App() {
     setDice(dieCopy);
   }
 
+  const consolidateResources = (arr) => {
+    let compiledResourceList = { name: arr[0].name, unique: arr[0].unique + arr[0].uniqueRowId, resources: { wheat: 0, brick: 0, wool: 0, wood: 0, ore: 0 } };
+
+    arr.forEach((cur) => {
+      compiledResourceList.resources.wheat += cur.resources.wheat;
+      compiledResourceList.resources.brick += cur.resources.brick;
+      compiledResourceList.resources.wool += cur.resources.wool;
+      compiledResourceList.resources.wood += cur.resources.wood;
+      compiledResourceList.resources.ore += cur.resources.ore;
+    });
+    if (!compiledResourceList.resources.wheat && !compiledResourceList.resources.brick && !compiledResourceList.resources.wool && !compiledResourceList.resources.wood && !compiledResourceList.resources.ore) return;
+    return compiledResourceList;
+  }
+
 
   const showResourcesHandler = (die) => {
     let dieCopy = dice.filter(el => el.die === die);
-    let arr = [];
+    let temp;
+    let returnArr = [];
 
     players.forEach(el => {
-      let completeList = { unique: el.unique, resources: { wheat: 0, brick: 0, wool: 0, wood: 0, ore: 0 } }
+      let allResourcesForPlayer = dieCopy[0].inventory.filter(person => person.unique === el.unique && !person.robber);
 
-      let item = dieCopy.inventory.filter(person => person.unique === el.unique && !person.robber);
-      item.forEach.map(el => {
-        completeList.resources.wheat += el.resources.wheat;
-        completeList.resources.brick += el.resources.brick;
-        completeList.resources.wool += el.resources.wool;
-        completeList.resources.wood += el.resources.wood;
-        completeList.resources.ore += el.resources.ore;
-      });
 
-      if (!completeList.resources.wheat &&
-        !completeList.resources.brick &&
-        !completeList.resources.wool &&
-        !completeList.resources.wood &&
-        !completeList.resources.ore) {
-        return;
-      } else {
-        arr.push(completeList);
+      if (allResourcesForPlayer[0]) {
+        temp = consolidateResources(allResourcesForPlayer);
+        if (temp) returnArr.push(consolidateResources(allResourcesForPlayer));
       }
-      setDisplayableResources(arr);
-    })
+    });
 
-    //filter the die for each player and add up each players respective resources
+    if (returnArr.length === 0) return;
 
+    setDisplayableResources(returnArr);
+  }
+
+  const hideResourcesHandler = () => {
+    setDisplayableResources('');
   }
 
   return (
@@ -157,6 +163,7 @@ function App() {
         addResourceHandler={addResourceHandler}
         removeResourceHandler={removeResourceHandler}
         showResourcesHandler={showResourcesHandler}
+        hideResourcesHandler={hideResourcesHandler}
       />}
     </div>
   );

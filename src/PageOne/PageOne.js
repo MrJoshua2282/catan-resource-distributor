@@ -6,19 +6,19 @@ export default function PageOne(props) {
     const [name, setName] = useState('');
 
     const nameChangeHandler = (e) => {
-        const nameValue = e.target.value;
-        setName(nameValue);
+        const { value } = e.target;
+        setName(value);
     }
     let players = props.players.map(el => {
         return (
-            <li key={el.unique}>{el.name} <span onClick={() => props.deletePlayerHandler(el.unique)}>&#x000D7;</span></li>
+            <li key={el.unique}>{el.name} <button onClick={() => props.deletePlayerHandler(el.unique)}>&#x000D7;</button></li>
         )
     })
     return (
-        <div>
+        <div className='page__one'>
             <label htmlFor='name-input'></label>
-            <input id='name-input' type='text' value={name} onChange={(e) => nameChangeHandler(e)} />
-            <button onClick={() => {
+            <input id='name-input' type='text' placeholder='Add Name' value={name} onChange={(e) => nameChangeHandler(e)} />
+            <button className='name-input__btn' onClick={() => {
                 props.addPlayerHandler(name)
                 setName('');
             }}>+ PLAYER</button>

@@ -10,6 +10,28 @@
     border: 1px solid black;
     border-radius: 3px;
     font-weight: 800;
+    cursor: pointer;
+    transition: all .3s;
+    box-shadow: inset 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+
+.dice__press:hover {
+  transform: scale(1.1) translate(0, 10%);
+  color: white;
+  background-color: salmon;
+  border: 1px solid salmon;
+}
+
+.displayable__resources {
+  display: flex;
+  justify-content: center;
+}
+
+.die__container__row {
+  width: max-content;
+  display: grid;
+  margin-bottom: .5rem;
+  grid-gap: .5rem;
 }
 
 .die__row {
@@ -20,41 +42,136 @@
     border: 1px solid black;
     border-radius: 3px;
     font-weight: 800;
+    text-align: center;
 }
 
 .resource__row {
     display: flex;
     justify-items: center;
     align-items: center;
+    margin: 0 0 1rem 1rem;
+    border: 1px solid rgb(255, 255, 255);
 }
+
+/* .resource__row:last-child {
+  margin-bottom: 3rem;
+} */
 
 .resource__btn-align {
     display: grid;
     grid-template-rows: max-content max-content max-content max-content;
-    grid-template-columns: max-content;
+    grid-template-columns: 4.5rem;
     justify-items: center;
+    grid-row-gap: .5rem;
 }
 
+.resource__btn-align button {
+  border-radius: 45%;
+  text-decoration: none;
+  outline: none;
+  transition: all .3s;
+  background-color: rgb(48, 156, 142);
+  box-shadow: 0 .25rem 1rem black;
+  border: 1px solid rgb(27, 202, 179);
+}
+
+.resource__btn-align button:hover {
+  background-color: rgba(47, 151, 137, 0.5);
+  transform: scale(1.012);
+  box-shadow: 0 .5rem 1.5rem black;
+  color: rgb(48, 156, 142);
+}
+
+.resource__btn-align button:active {
+  transform: scale(1) translateY(.15rem);
+  box-shadow: 0 .25rem .75rem black;
+}
+
+.robber__container {
+  position: relative;
+  margin: 0 4rem;
+}
+
+.active__robber {
+  opacity: 0%;
+  opacity: 50%;
+}
+
+.robber__container::before, .robber__container::after {
+  content: "";
+  position: absolute;
+  height: .5rem;
+  width: 4rem;
+  background-color: salmon;
+  border-radius: 6px;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  transition: all .2s;
+}
+
+.robber__container::after {
+  transform: rotate(-45deg) translate(-10px, 0);
+  left: 0;
+  top: 25%;
+}
+
+.robber__container::before {
+  transform: rotate(45deg) translate(-10px, 0);
+  left: 0;
+  bottom: 0;
+}
+
+.unActive__robber {
+  
+}
+
+.robber__margin {
+  margin: 0 4rem;
+}
+
+.noCursor {cursor: not-allowed;}
+
 .go_to_page_one {
-    position: absolute;
-    transform: translate(-50%, -50%);
+    position: relative;
+    transform: translate(-50%, -100%);
     left: 50%;
     bottom: 0;
 }
 
-
-.dropbtn {
-    background-color: #309c8e;
+.delete__row {
+  background-color: salmon;
     color: white;
-    padding: 16px;
-    font-size: 16px;
+    padding: 1rem;
+    margin: 1rem 1rem;
+    font-size: 1rem;
     border: none;
     cursor: pointer;
     transition: all .3s;
+    border-radius: 3px;
+}
+
+.delete__row:hover, .delete__row:focus {
+  background-color: #b34d4d;
+  translate: scale(1.1), translateX(1rem);
+}
+
+.dropbtn, .go_to_page_one, .let__games__begin, .clear__resources, .name-input__btn {
+    background-color: rgb(48, 156, 142);
+    color: white;
+    padding: 1rem;
+    margin: 1rem 1rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: all .3s;
+    border-radius: 3px;
   }
   
-  .dropbtn:hover, .dropbtn:focus {
+  .dropbtn:hover, .dropbtn:focus, .go_to_page_one:hover, .go_to_page_one:focus, .let__games__begin:hover, .let__games__begin:focus, .clear__resources:hover, .clear__resources:focus, .name-input__btn:hover, .name-input__btn:focus {
     background-color: #4db3aa;
+    translate: scale(1.1), translateX(1rem);
   }
   
   .dropdown {
@@ -82,3 +199,32 @@
   
   
   .show {display:block;}
+
+  button {cursor: pointer;}
+
+  img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 5px;
+  }
+
+  .displayable__resources {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* AllPlayersResources */
+
+  .condensed__resources {
+    display: grid;
+    grid-gap: 1rem;
+    margin: 1rem;
+    justify-items: center;
+  }
+
+  .condensed__resources__group {
+    display: grid;
+    grid-template-columns: max-content 2rem;
+    justify-items: center;
+    align-items: center;
+  }
