@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/catan-resource-distributor/static/css/main.7ff9c2f8.chunk.css",
+    "main.js": "/catan-resource-distributor/static/js/main.895a9c19.chunk.js",
+    "main.js.map": "/catan-resource-distributor/static/js/main.895a9c19.chunk.js.map",
+    "runtime-main.js": "/catan-resource-distributor/static/js/runtime-main.9df9b949.js",
+    "runtime-main.js.map": "/catan-resource-distributor/static/js/runtime-main.9df9b949.js.map",
+    "static/js/2.88ef4aa1.chunk.js": "/catan-resource-distributor/static/js/2.88ef4aa1.chunk.js",
+    "static/js/2.88ef4aa1.chunk.js.map": "/catan-resource-distributor/static/js/2.88ef4aa1.chunk.js.map",
+    "index.html": "/catan-resource-distributor/index.html",
+    "precache-manifest.5b040928dd7e99f6224703889cff764b.js": "/catan-resource-distributor/precache-manifest.5b040928dd7e99f6224703889cff764b.js",
+    "service-worker.js": "/catan-resource-distributor/service-worker.js",
+    "static/css/main.7ff9c2f8.chunk.css.map": "/catan-resource-distributor/static/css/main.7ff9c2f8.chunk.css.map",
+    "static/js/2.88ef4aa1.chunk.js.LICENSE.txt": "/catan-resource-distributor/static/js/2.88ef4aa1.chunk.js.LICENSE.txt",
+    "static/media/brick.jpg": "/catan-resource-distributor/static/media/brick.7b82549f.jpg",
+    "static/media/lumber.png": "/catan-resource-distributor/static/media/lumber.038a5934.png",
+    "static/media/robber.png": "/catan-resource-distributor/static/media/robber.44f6de88.png",
+    "static/media/wheat.jpg": "/catan-resource-distributor/static/media/wheat.26ee0bf6.jpg",
+    "static/media/wool.jpg": "/catan-resource-distributor/static/media/wool.c4a3729b.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9df9b949.js",
+    "static/js/2.88ef4aa1.chunk.js",
+    "static/css/main.7ff9c2f8.chunk.css",
+    "static/js/main.895a9c19.chunk.js"
+  ]
+}
