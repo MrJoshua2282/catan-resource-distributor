@@ -1,0 +1,136 @@
+.node {
+    width: 4vw;
+    height: 4vw;
+    border-radius: 50%;
+    position: absolute;
+    background-color: rgb(226, 168, 41);
+    z-index: 44;
+}
+
+/* ****** 2 ****** */
+#n2a {
+    transform: translate(7.5vw, 20.5vw);
+}
+#n2b {
+    transform: translate(7.5vw, 34.5vw);
+}
+#n2c {
+    transform: translate(7.5vw, 60.5vw);
+}
+#n2d {
+    transform: translate(7.5vw, 74.5vw);
+}
+
+/* ****** 3 ****** */
+#n3a {
+    transform: translate(38vw, 2.5vw);
+}
+#n3b {
+    transform: translate(38vw, 15vw);
+}
+#n3c {
+    transform: translate(38vw, 41vw);
+}
+#n3d {
+    transform: translate(38vw, 55vw);
+}
+#n3e {
+    transform: translate(38vw, 81vw);
+}
+#n3f {
+    transform: translate(38vw, 93.5vw);
+}
+
+/* ****** 4 ****** */
+#n4a {
+    transform: translate(27.5vw, -5.5vw);
+}
+#n4b {
+    transform: translate(27.5vw, 20.5vw);
+}
+#n4c {
+    transform: translate(27.5vw, 34.5vw);
+}
+#n4d {
+    transform: translate(27.5vw, 60.5vw);
+}
+#n4e {
+    transform: translate(27.5vw, 74.5vw);
+}
+#n4f {
+    transform: translate(27.5vw, 100.5vw);
+}
+
+/* ****** 5 ****** */
+#n6a {
+    transform: translate(47.5vw, -5.5vw);
+}
+#n6b {
+    transform: translate(47.5vw, 20.5vw);
+}
+#n6c {
+    transform: translate(47.5vw, 34.5vw);
+}
+#n6d {
+    transform: translate(47.5vw, 60.5vw);
+}
+#n6e {
+    transform: translate(47.5vw, 74.5vw);
+}
+#n6f {
+    transform: translate(47.5vw, 100.5vw);
+}
+
+/* ****** 6 ****** */
+#n6a {
+    transform: translate(47.5vw, -5.5vw);
+}
+#n6b {
+    transform: translate(47.5vw, 20.5vw);
+}
+#n6c {
+    transform: translate(47.5vw, 34.5vw);
+}
+#n6d {
+    transform: translate(47.5vw, 60.5vw);
+}
+#n6e {
+    transform: translate(47.5vw, 74.5vw);
+}
+#n6f {
+    transform: translate(47.5vw, 100.5vw);
+}
+
+/* ****** 8 ****** */
+#n8a {
+    transform: translate(67.5vw, -5.5vw);
+}
+#n8b {
+    transform: translate(67.5vw, 20.5vw);
+}
+#n8c {
+    transform: translate(67.5vw, 34.5vw);
+}
+#n8d {
+    transform: translate(67.5vw, 60.5vw);
+}
+#n8e {
+    transform: translate(67.5vw, 74.5vw);
+}
+#n8f {
+    transform: translate(67.5vw, 100.5vw);
+}
+
+/* ****** 10 ****** */
+#n10a {
+    transform: translate(87.5vw, 20.5vw);
+}
+#n10b {
+    transform: translate(87.5vw, 34.5vw);
+}
+#n10c {
+    transform: translate(87.5vw, 60.5vw);
+}
+#n10d {
+    transform: translate(87.5vw, 74.5vw);
+}

@@ -45,6 +45,7 @@
     text-align: center;
 }
 
+
 .resource__row {
     display: flex;
     justify-items: center;
@@ -97,6 +98,10 @@
   opacity: 50%;
 }
 
+.robber__img, .robber__container::before, .robber__container::after {
+  cursor: pointer;
+}
+
 .robber__container::before, .robber__container::after {
   content: "";
   position: absolute;
@@ -121,10 +126,6 @@
   transform: rotate(45deg) translate(-10px, 0);
   left: 0;
   bottom: 0;
-}
-
-.unActive__robber {
-  
 }
 
 .robber__margin {

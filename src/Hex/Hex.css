@@ -1,0 +1,38 @@
+.hex {
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.bigHex {
+    height: 100vw;
+    width: 100vw;
+    background: linear-gradient(12deg, rgb(26, 113, 212), rgb(25, 166, 201));
+    box-shadow: 1rem 1rem 1rem black;
+    position: relative;
+}
+
+.smallHex {
+    height: 20vw;
+    width: 20vw;
+    background-color: rgb(210, 247, 210);
+    clip-path: polygon(50% 0, 87.5% 25%, 87.5% 75%, 50% 100%, 12.5% 75%, 12.5% 25%);
+}
+
+.hex__row {
+    width: 20vw;
+    display: grid;
+    justify-items: center;
+}
+
+.three {
+    grid-template-columns: 1fr 1fr 1fr;
+    transform: translateX(20vw);
+}
+
+.four {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    transform: translateX(10vw);
+}
+
+.five {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
