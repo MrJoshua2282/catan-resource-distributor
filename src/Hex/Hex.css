@@ -5,15 +5,14 @@
 .bigHex {
     height: 100vw;
     width: 100vw;
-    background: linear-gradient(12deg, rgb(26, 113, 212), rgb(25, 166, 201));
-    box-shadow: 1rem 1rem 1rem black;
+    background: linear-gradient(12deg,rgb(206, 159, 72), rgb(206, 159, 72));
     position: relative;
 }
 
 .smallHex {
     height: 20vw;
     width: 20vw;
-    background-color: rgb(210, 247, 210);
+    background-color: rgb(243, 205, 205);
     clip-path: polygon(50% 0, 87.5% 25%, 87.5% 75%, 50% 100%, 12.5% 75%, 12.5% 25%);
 }
 

@@ -3,134 +3,174 @@
     height: 4vw;
     border-radius: 50%;
     position: absolute;
-    background-color: rgb(226, 168, 41);
+    background-color: rgb(231, 216, 184);
     z-index: 44;
 }
 
 /* ****** 2 ****** */
 #n2a {
-    transform: translate(7.5vw, 20.5vw);
+    transform: translate(8vw, 21.5vw);
 }
 #n2b {
-    transform: translate(7.5vw, 34.5vw);
+    transform: translate(8vw, 35vw);
 }
 #n2c {
-    transform: translate(7.5vw, 60.5vw);
+    transform: translate(8vw, 61vw);
 }
 #n2d {
-    transform: translate(7.5vw, 74.5vw);
+    transform: translate(8vw, 75vw);
 }
 
 /* ****** 3 ****** */
 #n3a {
-    transform: translate(38vw, 2.5vw);
+    transform: translate(18vw, 2.5vw);
 }
 #n3b {
-    transform: translate(38vw, 15vw);
+    transform: translate(18vw, 15vw);
 }
 #n3c {
-    transform: translate(38vw, 41vw);
+    transform: translate(18vw, 41vw);
 }
 #n3d {
-    transform: translate(38vw, 55vw);
+    transform: translate(18vw, 55vw);
 }
 #n3e {
-    transform: translate(38vw, 81vw);
+    transform: translate(18vw, 81vw);
 }
 #n3f {
-    transform: translate(38vw, 93.5vw);
+    transform: translate(18vw, 93.5vw);
 }
 
 /* ****** 4 ****** */
 #n4a {
-    transform: translate(27.5vw, -5.5vw);
+    transform: translate(28vw, -5vw);
 }
 #n4b {
-    transform: translate(27.5vw, 20.5vw);
+    transform: translate(28vw, 21.5vw);
 }
 #n4c {
-    transform: translate(27.5vw, 34.5vw);
+    transform: translate(28vw, 35vw);
 }
 #n4d {
-    transform: translate(27.5vw, 60.5vw);
+    transform: translate(28vw, 61vw);
 }
 #n4e {
-    transform: translate(27.5vw, 74.5vw);
+    transform: translate(28vw, 75vw);
 }
 #n4f {
-    transform: translate(27.5vw, 100.5vw);
+    transform: translate(28vw, 101vw);
 }
 
 /* ****** 5 ****** */
-#n6a {
-    transform: translate(47.5vw, -5.5vw);
+#n5a {
+    transform: translate(38vw, 2.5vw);
 }
-#n6b {
-    transform: translate(47.5vw, 20.5vw);
+#n5b {
+    transform: translate(38vw, 15vw);
 }
-#n6c {
-    transform: translate(47.5vw, 34.5vw);
+#n5c {
+    transform: translate(38vw, 41vw);
 }
-#n6d {
-    transform: translate(47.5vw, 60.5vw);
+#n5d {
+    transform: translate(38vw, 55vw);
 }
-#n6e {
-    transform: translate(47.5vw, 74.5vw);
+#n5e {
+    transform: translate(38vw, 81vw);
 }
-#n6f {
-    transform: translate(47.5vw, 100.5vw);
+#n5f {
+    transform: translate(38vw, 93.5vw);
 }
 
 /* ****** 6 ****** */
 #n6a {
-    transform: translate(47.5vw, -5.5vw);
+    transform: translate(48vw, -5vw);
 }
 #n6b {
-    transform: translate(47.5vw, 20.5vw);
+    transform: translate(48vw, 21.5vw);
 }
 #n6c {
-    transform: translate(47.5vw, 34.5vw);
+    transform: translate(48vw, 35vw);
 }
 #n6d {
-    transform: translate(47.5vw, 60.5vw);
+    transform: translate(48vw, 61vw);
 }
 #n6e {
-    transform: translate(47.5vw, 74.5vw);
+    transform: translate(48vw, 75vw);
 }
 #n6f {
-    transform: translate(47.5vw, 100.5vw);
+    transform: translate(48vw, 101vw);
+}
+
+/* ****** 7 ****** */
+#n7a {
+    transform: translate(58vw, 2.5vw);
+}
+#n7b {
+    transform: translate(58vw, 15vw);
+}
+#n7c {
+    transform: translate(58vw, 41vw);
+}
+#n7d {
+    transform: translate(58vw, 55vw);
+}
+#n7e {
+    transform: translate(58vw, 81vw);
+}
+#n7f {
+    transform: translate(58vw, 93.5vw);
 }
 
 /* ****** 8 ****** */
 #n8a {
-    transform: translate(67.5vw, -5.5vw);
+    transform: translate(68vw, -5vw);
 }
 #n8b {
-    transform: translate(67.5vw, 20.5vw);
+    transform: translate(68vw, 21.5vw);
 }
 #n8c {
-    transform: translate(67.5vw, 34.5vw);
+    transform: translate(68vw, 35vw);
 }
 #n8d {
-    transform: translate(67.5vw, 60.5vw);
+    transform: translate(68vw, 61vw);
 }
 #n8e {
-    transform: translate(67.5vw, 74.5vw);
+    transform: translate(68vw, 75vw);
 }
 #n8f {
-    transform: translate(67.5vw, 100.5vw);
+    transform: translate(68vw, 101vw);
+}
+
+/* ****** 9 ****** */
+#n9a {
+    transform: translate(78vw, 2.5vw);
+}
+#n9b {
+    transform: translate(78vw, 15vw);
+}
+#n9c {
+    transform: translate(78vw, 41vw);
+}
+#n9d {
+    transform: translate(78vw, 55vw);
+}
+#n9e {
+    transform: translate(78vw, 81vw);
+}
+#n9f {
+    transform: translate(78vw, 93.5vw);
 }
 
 /* ****** 10 ****** */
 #n10a {
-    transform: translate(87.5vw, 20.5vw);
+    transform: translate(88vw, 21.5vw);
 }
 #n10b {
-    transform: translate(87.5vw, 34.5vw);
+    transform: translate(88vw, 35vw);
 }
 #n10c {
-    transform: translate(87.5vw, 60.5vw);
+    transform: translate(88vw, 61vw);
 }
 #n10d {
-    transform: translate(87.5vw, 74.5vw);
+    transform: translate(88vw, 75vw);
 }
